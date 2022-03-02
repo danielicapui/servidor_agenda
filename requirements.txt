@@ -1,0 +1,6 @@
+string
+pyscopg2
+socket
+collections
+socket
+threading
