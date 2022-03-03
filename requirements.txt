@@ -1,1 +1,1 @@
-pyscopg2
+pyscopg2-binaries
