@@ -70,7 +70,7 @@ class Agenda:
                 f=True
     #mensagem:cod:9 e valor:x id do registro
     def apagar_registro(self,id,registro):
-        sql="delete from agenda where agenda.nome='{}' and agenda.telefone='{}' and agenda.email='{}' and agenda.dono_id={} returning id,nome,telefone,email;".format(registro[0],registro[1],registro[2],id)
+        sql="delete from agenda where agenda.nome='{}' and agenda.telefone='{}' and agenda.email='{}' and agenda.dono_id={} returning dono_id,nome,telefone,email;".format(registro[0],registro[1],registro[2],id)
         r=criar_tabelas(sql)
         #mensagem:cod 10 e valor:-3
         if str(r[0])==str(id) and r[1]==registro[0] and r[2]==registro[1] and r[3]==registro[2]:
